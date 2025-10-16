@@ -1,0 +1,19 @@
+img {
+    width: 200px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background-color: pink;
+}
+
+.on-sale {
+    background-color: yellow;
+}
+
+#best-one {
+    background-color: red;
+}
