@@ -59,18 +59,62 @@ a:hover {
   flex-wrap: wrap;
 
   margin: 1rem 2rem;
-
 }
 
 .box {
   background-color: #f3d959;
+  border: 1px dashed red;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 80px;
   padding: 1rem;
   margin: 0.5rem;
-};
+}
 
 #special {
   background-color: red;
 
-  text-align: center;
   /* display: flex; */
+  text-align: center;
 }
+
+@media only screen and (min-width: 600px) {
+  
+  body {
+    background-color: green;
+  }
+
+  .box {
+    width: 40%;
+  }
+  
+}
+
+@media only screen and (min-width: 780px) {
+  
+  body {
+    background-color: yellow;
+  }
+
+  .box {
+    width: 25%;
+  }
+  
+}
+
+@media only screen and (min-width: 1200px) {
+
+  body {
+    background-color: orange;
+  }
+
+  .box {
+    width: 12%;
+  }
+  
+}
+
