@@ -6,9 +6,8 @@ A responsive digital scoreboard inspired by the concept of a customizable pinboa
 It allows users to rename teams, update scores, save match results, and switch between two different layouts (horizontal and vertical).
 Simple interactions, instant feedback, and easy usability.
 
-Functional Logic and Interaction Modalities
-
-//The web app simulates a footvolley match scoreboard//
+//Functional Logic and Interaction Modalities
+The web app simulates a footvolley match scoreboard//
 
 Users can:
 
