@@ -131,6 +131,7 @@ button:hover {
   text-align: center;
 }
 
+/* STYLES FOR RESULTS LIST */
 #results-list {
   list-style: none;
   padding: 0;
@@ -139,6 +140,8 @@ button:hover {
   font-size: 1rem;
 }
 
+
+/*STYLES FOR INDIVIDUAL RESULT ITEMS */
 #results-list li {
   padding: 0.5rem;
   border-bottom: 1px solid #ddd;
