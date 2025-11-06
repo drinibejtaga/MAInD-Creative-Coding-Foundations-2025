@@ -27,12 +27,11 @@ Users can:
 - The layout automatically adapts to smartphones, tablets, and desktops using Flexbox and media queries.
 
 // Functions List //
-
-- incrementA / incrementB: 
+incrementA / incrementB: 
   - Increases the score of the selected team by 1 and updates the displayed value;
   - Updated score value;
 
-- decrementA / decrementB:
+decrementA / decrementB:
   - Decreases the score (if greater than 0) and updates the displayed value;
   - Updated score value;
 
