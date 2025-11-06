@@ -9,19 +9,19 @@ const decrementB = document.getElementById('decrement-b');
 
 const resetButton = document.getElementById('reset-scores');
 
-// variabili per tenere il punteggio attuale
+// variabili punteggio
 let scoreValueA = 0;
 let scoreValueB = 0;
 
 
-// Quando clicchi su "+" della squadra A
+// Quando click "+" della squadra A
 incrementA.addEventListener('click', () => {
   scoreValueA = scoreValueA + 1;          // aumenta il punteggio
   scoreA.textContent = scoreValueA;       // aggiorna il testo nel browser
   console.log("Incremento squadra A:", scoreValueA);
 });
 
-// Quando clicchi su "-" della squadra A
+// Quando click "-" della squadra A
 decrementA.addEventListener('click', () => {
   if (scoreValueA > 0) {                  // evita punteggi negativi
     scoreValueA = scoreValueA - 1;
@@ -30,14 +30,14 @@ decrementA.addEventListener('click', () => {
   console.log("Decremento squadra A:", scoreValueA);
 });
 
-// Quando clicchi su "+" della squadra B
+// Quando click su "+" della squadra B
 incrementB.addEventListener('click', () => {
   scoreValueB = scoreValueB + 1;
   scoreB.textContent = scoreValueB;
   console.log("Incremento squadra B:", scoreValueB);
 });
 
-// Quando clicchi su "-" della squadra B
+// Quando click su "-" della squadra B
 decrementB.addEventListener('click', () => {
   if (scoreValueB > 0) {
     scoreValueB = scoreValueB - 1;
@@ -59,7 +59,7 @@ resetButton.addEventListener('click', () => {
 const toggleViewButton = document.getElementById('toggleView');
 const scoreboard = document.getElementById('scoreboard');
 
-// Quando clicchi il pulsante "Switch view"
+// Quando click sul pulsante "Switch view"
 toggleViewButton.addEventListener('click', () => {
   console.log("Switch view clicked!");
   scoreboard.classList.toggle('vertical');
@@ -78,7 +78,7 @@ saveButton.addEventListener('click', () => {
   const listItem = document.createElement('li');
   listItem.textContent = `${teamAName}: ${scoreValueA} — ${teamBName}: ${scoreValueB}`;
 
-  // Aggiungilo alla lista
+  // Aggiungi alla lista
   resultsList.appendChild(listItem);
 
   console.log("Score saved on screen!");
