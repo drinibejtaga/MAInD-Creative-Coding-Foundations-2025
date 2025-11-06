@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/style.css">
+    <script src="assets/script.js" defer></script>
+    <title>Ultimate Footvolley Scoreboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>ULTIMATE FOOTVOLLEY SCOREBOARD</h1>
+        <div class="controls">
+            <button id="toggleView">Switch view</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="scoreboard">
+            <div id="team-a" class="team">
+                <input type="text" id="input-a" class="name-input" placeholder="Type Team A">
+                <p id="score-a">0</p>
+                <button id="decrement-a">-</button>
+                <button id="increment-a">+</button>
+            </div>
+            <div id="team-b" class="team">
+                <input type="text" id="input-b" class="name-input" placeholder="Type Team B">
+                <p id="score-b">0</p>
+                <button id="decrement-b">-</button>
+                <button id="increment-b">+</button>
+            </div>
+        </section>
+
+        <section id="controls">
+            <button id="reset-scores">Reset Score</button>
+            <button id="save-scores">Save Score</button>
+            <button id="clear-saved">Clear Saved</button>
+        </section>
+        <section id="saved-results">
+            <h3>Saved Scores</h3>
+            <ul id="results-list"></ul>
+        </section>
+   
+    </main>
+    
+</body>
+
+</html>
