@@ -2,3 +2,10 @@
     height: 1rem;
     background-color: gray;
 }
+
+ol {
+    padding: 0%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}

@@ -7,7 +7,7 @@ const API_URL = "https://api.openweathermap.org/data/2.5/forecast?lat=45.9&lon=8
 fetch(API_URL)
   .then(response => response.json()) 
   .then(data => displayData(data))
-  .catch(error => console.error('Error:', error));
+  .catch(error => console.log('Error:', error));
 
 
 function displayData(data) {

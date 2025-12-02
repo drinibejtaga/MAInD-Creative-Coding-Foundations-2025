@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRISSSSSS!!!</title>
+    <link rel="stylesheet" href="Assets/style.css">
+    <script src="Assets/script.js" defer></script>
+</head>
+<body id="background">
+
+    <!-- SCHERMATA INIZIALE -->
+    <div id="start-screen">
+        <h1>TRISSSSSS</h1>
+        <p>Choose your symbol:</p>
+        <div class="symbol-buttons">
+            <button class="symbol-btn" data-symbol="X">X</button>
+            <button class="symbol-btn" data-symbol="O">O</button>
+        </div>
+
+        <button id="rules-btn">Rules</button>
+    </div>
+
+    <!-- SCHERMATA RULES -->
+    <div id="rules-screen" class="hidden">
+        <h2>Rules</h2>
+        <p>Place three of your symbols (X or O) in a row to win!</p>
+        <button id="back-btn">Back</button>
+    </div>
+
+    <!-- SCHERMATA GIOCO -->
+    <div id="game-screen" class="hidden">
+        <h2 id="turn-display"></h2>
+        <div id="board"></div>
+        <div id="gif-container"></div>
+        <div id="score">
+            <p>X Wins: <span id="score-x">0</span></p>
+            <p>O Wins: <span id="score-o">0</span></p>
+            <p>Draws: <span id="score-draw">0</span></p>
+        </div>
+    </div>
+
+</body>
+</html>
