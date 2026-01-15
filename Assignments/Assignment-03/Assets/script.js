@@ -76,7 +76,7 @@ function createBoard() {
     }
 }
 
-const API_KEY = "";
+const API_KEY = "PnhYbLljqIFqZVE7MHcubiNB26aCzzbL";
 
 function showGif(type) {
     const gifContainer = document.getElementById("gif-container");
@@ -87,7 +87,7 @@ function showGif(type) {
     fetch(`https://api.giphy.com/v1/gifs/search?q=${searchQuery}&api_key=${API_KEY}&limit=20`) // cerca parola chiavi in base alla searchQuery, con un limite di massimo 20 gif
         .then(res => res.json()) // trasforma la risposta in un oggetto .json)
         .then(data => {
-            const randomIndex = Math.floor(Math.random() * data.data.length); //  Scelta Gif casuale
+            const randomIndex = Math.floor(Math.random() * data.data.length); //  Scelta Gif casuale, tra 0 e la lunghezza dell'array delle gif, Math.floor arrotonda per difetto
             const gifUrl = data.data[randomIndex].images.downsized.url; // Scelta Gif in maniera randomica
 
             const img = document.createElement("img"); // creo nuovo img
@@ -102,7 +102,7 @@ function showGif(type) {
 function resetGame () {
     boardState = ["", "", "", "", "", "", "", "", ""]; // celle vuote
     gameActive = true;
-    body.classList.remove('winState');
+    body.classList.remove('winState'); // rimuovi background verde
 
     createBoard(); // ricrea tutte le celle
     updateTurnDisplay(); // aggiorna il display del turno
@@ -112,15 +112,15 @@ function resetGame () {
 // handleCellClick: gestisce il click su una cella
 function handleCellClick(event) {
     const cell = event.target;
-    const index = cell.getAttribute('data-index');
+    const index = cell.getAttribute('data-index'); // prendi l'indice della cella cliccata
 
-    if (boardState[index] !== "" || !gameActive) return;
+    if (boardState[index] !== "" || !gameActive) return; // se la cella è già occupata o il gioco è finito, esci
 
-    boardState[index] = currentPlayer;
-    cell.textContent = currentPlayer;
+    boardState[index] = currentPlayer; // aggiorna lo stato della board
+    cell.textContent = currentPlayer; // mostra il simbolo nella cella
 
     if (checkWinner()) {
-    gameActive = false;
+    gameActive = false; // il gioco finisce
     body.classList.add('winState') //background verde
     showGif("win");
     winSound.play();
@@ -128,11 +128,11 @@ function handleCellClick(event) {
     setTimeout(() => {
         resetGame();
         document.getElementById("gif-container").innerHTML = "";
-    }, 3500);
+    }, 3500);  
     return;
     }
 
-    if (!boardState.includes("")) {
+    if (!boardState.includes("")) { // se non ci sono celle vuote, è un pareggio
     gameActive = false;
     showGif("draw");
     updateScore("draw");
@@ -149,8 +149,8 @@ function handleCellClick(event) {
 }
 
 function checkWinner() {
-    for (let i = 0; i < winConditions.length; i++) {
-        const condition = winConditions[i];
+    for (let i = 0; i < winConditions.length; i++) { // ciclo tutte le condizioni di vittoria
+        const condition = winConditions[i]; // prendo la condizione di vittoria corrente
         const a = condition[0];
         const b = condition[1];
         const c = condition[2];
@@ -164,7 +164,7 @@ function checkWinner() {
 }
 
 function updateScore(player) {
-    if (player === 'X') { // Se ili giocatore corrisponde a "X" il numero del suo score si aggiorna di +1
+    if (player === 'X') { // Se il giocatore corrisponde a "X" il numero del suo score si aggiorna di +1
         scoreX.textContent = Number(scoreX.textContent) + 1; // Update score X player
     } else if (player === 'O') { // Se ili giocatore corrisponde a "O" il numero del suo score si aggiorna di +1
         scoreO.textContent = Number(scoreO.textContent) + 1; // Update score O player
